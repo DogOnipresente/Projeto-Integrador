@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmfk4yd2dr63u"]
+
+[ext_resource type="Texture2D" uid="uid://drbpfdjgngfnf" path="res://icon.svg" id="1_vowif"]
+[ext_resource type="Script" uid="uid://cbr21ksjowxud" path="res://objeto.gd" id="2_vowif"]
+
+[node name="Cena2D_Teste" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Objeto" type="Sprite2D" parent="."]
+position = Vector2(-442, 213)
+texture = ExtResource("1_vowif")
+script = ExtResource("2_vowif")
+
+[node name="Button" type="Button" parent="Objeto"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -65.0
+offset_top = -63.0
+offset_right = 64.0
+offset_bottom = 64.0
+metadata/_edit_lock_ = true
+
+[node name="Objeto2" type="Sprite2D" parent="."]
+position = Vector2(-74, 214)
+texture = ExtResource("1_vowif")
+script = ExtResource("2_vowif")
+
+[node name="Button" type="Button" parent="Objeto2"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -65.0
+offset_top = -63.0
+offset_right = 64.0
+offset_bottom = 64.0
+metadata/_edit_lock_ = true
+
+[node name="Objeto3" type="Sprite2D" parent="."]
+position = Vector2(-258, 213)
+texture = ExtResource("1_vowif")
+script = ExtResource("2_vowif")
+
+[node name="Button" type="Button" parent="Objeto3"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -65.0
+offset_top = -63.0
+offset_right = 64.0
+offset_bottom = 64.0
+metadata/_edit_lock_ = true
+
+[connection signal="button_down" from="Objeto/Button" to="Objeto" method="_on_button_button_down"]
+[connection signal="button_up" from="Objeto/Button" to="Objeto" method="_on_button_button_up"]
+[connection signal="button_down" from="Objeto2/Button" to="Objeto2" method="_on_button_button_down"]
+[connection signal="button_up" from="Objeto2/Button" to="Objeto2" method="_on_button_button_up"]
+[connection signal="button_down" from="Objeto3/Button" to="Objeto3" method="_on_button_button_down"]
+[connection signal="button_up" from="Objeto3/Button" to="Objeto3" method="_on_button_button_up"]
